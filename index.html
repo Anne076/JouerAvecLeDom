@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jouer avec le DOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="cssperso.css">
+</head>
+
+<body>
+    <h1>Jouer avec le DOM</h1>
+    <section>
+        <h2>Zone d'interaction</h2>
+        <form class="pure-form pure-form-aligned">
+            <div class="pure-control-group">
+                <label for="pseudo">Votre pseudo ?</label>
+                <input type="text" id="pseudo" name="valeurDePseudoTransmiseParHTTP">
+            </div>
+            <div class="pure-control-group">
+                <label for="leContenu">Quel texte ajoute-t-on à la zone cible ?</label>
+                <input type="text" id="leContenu" name="valeurDeContenuTransmiseParHTTP">
+            </div>
+            <div class="pure-controls">
+                <button id="envoi" class="pure-button">Ajouter à la zone cible</button>
+            </div>
+        </form>
+    </section>
+    <section id="zoneCible">
+        <h2>Zone cible</h2>
+        <p>On a ici un premier paragraphe... saisissez du contenu dans la zone d'interaction pour en ajouter en
+            JavaScript !</p>
+    </section>
+    <section if="zoneInfo">
+        <h2>Zone info</h2>
+        <p id="parInfo"> Ce paragraphe se met à jour lorsque un évènement écouté se produit</p>
+    </section>
+
+    <script src="interaction.js"></script>
+</body>
+
+</html>
